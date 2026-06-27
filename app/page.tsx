@@ -1,65 +1,104 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-slate-50 text-slate-900">
+      <nav className="border-b bg-white">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <div className="text-2xl font-bold text-emerald-700">
+            KolabRiset<span className="text-slate-900"> Wakatobi</span>
+          </div>
+
+          <div className="hidden gap-6 text-sm font-medium md:flex">
+            <a href="#" className="text-emerald-700">Beranda</a>
+            <a href="#" className="hover:text-emerald-700">Daftar Dosen</a>
+            <a href="#" className="hover:text-emerald-700">Peluang Riset</a>
+            <a href="#" className="hover:text-emerald-700">Hibah</a>
+            <a href="#" className="hover:text-emerald-700">Konferensi/CFP</a>
+          </div>
+        </div>
+      </nav>
+
+      <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center">
+        <div>
+          <p className="mb-3 text-sm font-bold uppercase tracking-widest text-emerald-700">
+            Platform Kolaborasi Akademik
           </p>
+
+          <h1 className="mb-6 text-4xl font-extrabold leading-tight md:text-5xl">
+            Temukan mitra riset, dosen, dan peluang kolaborasi di Wakatobi.
+          </h1>
+
+          <p className="mb-8 text-lg leading-relaxed text-slate-600">
+            KolabRiset Wakatobi adalah platform untuk mempertemukan dosen,
+            peneliti, mahasiswa, dan praktisi dalam pengembangan riset,
+            publikasi ilmiah, pengabdian masyarakat, serta inovasi daerah.
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="#"
+              className="rounded-xl bg-emerald-700 px-6 py-3 font-semibold text-white shadow hover:bg-emerald-800"
+            >
+              Mulai Bergabung
+            </a>
+
+            <a
+              href="#"
+              className="rounded-xl border border-emerald-700 px-6 py-3 font-semibold text-emerald-700 hover:bg-emerald-50"
+            >
+              Lihat Daftar Dosen
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="rounded-3xl border bg-white p-6 shadow-sm">
+          <h2 className="mb-4 text-xl font-bold">Fitur Utama</h2>
+
+          <div className="space-y-4">
+            <div className="rounded-2xl bg-emerald-50 p-4">
+              <h3 className="font-bold text-emerald-800">Direktori Dosen</h3>
+              <p className="text-sm text-slate-600">
+                Profil dosen berdasarkan bidang keahlian, kampus, mata kuliah,
+                dan minat riset.
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-emerald-50 p-4">
+              <h3 className="font-bold text-emerald-800">Peluang Riset</h3>
+              <p className="text-sm text-slate-600">
+                Publikasi peluang penelitian, hibah, konferensi, dan call for
+                papers.
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-emerald-50 p-4">
+              <h3 className="font-bold text-emerald-800">Kolaborasi</h3>
+              <p className="text-sm text-slate-600">
+                Menghubungkan peneliti lintas bidang untuk riset, publikasi,
+                dan pengabdian.
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-16">
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="rounded-2xl bg-white p-6 shadow-sm">
+            <div className="text-3xl font-extrabold text-emerald-700">100+</div>
+            <p className="mt-2 text-slate-600">Target dosen dan peneliti terdaftar</p>
+          </div>
+
+          <div className="rounded-2xl bg-white p-6 shadow-sm">
+            <div className="text-3xl font-extrabold text-emerald-700">20+</div>
+            <p className="mt-2 text-slate-600">Bidang keahlian riset dan pengabdian</p>
+          </div>
+
+          <div className="rounded-2xl bg-white p-6 shadow-sm">
+            <div className="text-3xl font-extrabold text-emerald-700">1</div>
+            <p className="mt-2 text-slate-600">Ekosistem kolaborasi riset Wakatobi</p>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
